@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ActiviteSportive" representedClassName="ActiviteSportive" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sportif" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="activite" inverseEntity="Personne" syncable="YES"/>
+    </entity>
+    <entity name="Ordonnance" representedClassName="Ordonnance" syncable="YES" codeGenerationType="class">
+        <attribute name="datePrescrit" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="docteur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="ordonnance" inverseEntity="Personne" syncable="YES"/>
+        <relationship name="prescription" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prescription" inverseName="ordonnance" inverseEntity="Prescription" syncable="YES"/>
+    </entity>
+    <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numeroRue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="specialite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ville" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteSportive" inverseName="sportif" inverseEntity="ActiviteSportive" syncable="YES"/>
+        <relationship name="ordonnance" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ordonnance" inverseName="docteur" inverseEntity="Ordonnance" syncable="YES"/>
+        <relationship name="rdv" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RendezVous" inverseName="docteur" inverseEntity="RendezVous" syncable="YES"/>
+    </entity>
+    <entity name="Prescription" representedClassName="Prescription" syncable="YES" codeGenerationType="class">
+        <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dose" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medicament" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ordonnance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ordonnance" inverseName="prescription" inverseEntity="Ordonnance" syncable="YES"/>
+        <relationship name="prise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prise" inverseName="prescription" inverseEntity="Prise" syncable="YES"/>
+    </entity>
+    <entity name="Prise" representedClassName="Prise" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="prescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescription" inverseName="prise" inverseEntity="Prescription" syncable="YES"/>
+    </entity>
+    <entity name="RendezVous" representedClassName="RendezVous" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="docteur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" inverseName="rdv" inverseEntity="Personne" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ActiviteSportive" positionX="-873" positionY="-7074" width="128" height="103"/>
+        <element name="Ordonnance" positionX="-515" positionY="-6880" width="128" height="103"/>
+        <element name="Personne" positionX="-578" positionY="-7182" width="128" height="195"/>
+        <element name="Prescription" positionX="-765" positionY="-6850" width="128" height="133"/>
+        <element name="Prise" positionX="-954" positionY="-6819" width="128" height="73"/>
+        <element name="RendezVous" positionX="-324" positionY="-7173" width="128" height="88"/>
+    </elements>
 </model>

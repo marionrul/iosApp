@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2C1AC0205FD59F00CAF176 /* OrdonnancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1ABF205FD59F00CAF176 /* OrdonnancePresenter.swift */; };
+		1E2C1AC2205FDC7300CAF176 /* AddOrdonnanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C1AC1205FDC7300CAF176 /* AddOrdonnanceViewController.swift */; };
+		1ECD571D2058207D00A78FE8 /* ShowActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD571C2058207D00A78FE8 /* ShowActiviteViewController.swift */; };
+		1ECD572020582EA700A78FE8 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD571F20582EA700A78FE8 /* AddActivityViewController.swift */; };
+		1ECD572320582FEE00A78FE8 /* ActiviteSportiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD572220582FEE00A78FE8 /* ActiviteSportiveModel.swift */; };
+		1ECD5726205832E600A78FE8 /* ActiviteSportiveExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD5725205832E600A78FE8 /* ActiviteSportiveExt.swift */; };
+		1ECD5728205840D600A78FE8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD5727205840D600A78FE8 /* CoreDataManager.swift */; };
+		1ECD572A2058422E00A78FE8 /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD57292058422E00A78FE8 /* DialogBoxHelper.swift */; };
+		1ECD57352058536100A78FE8 /* OrdonnanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD572E2058536100A78FE8 /* OrdonnanceModel.swift */; };
+		1ECD57362058536100A78FE8 /* PersonneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD572F2058536100A78FE8 /* PersonneModel.swift */; };
+		1ECD57372058536100A78FE8 /* PrescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD57302058536100A78FE8 /* PrescriptionModel.swift */; };
+		1ECD57392058536100A78FE8 /* Synthese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD57322058536100A78FE8 /* Synthese.swift */; };
+		1ED370F4206A468600C400D0 /* PriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED370F3206A468600C400D0 /* PriseTableViewCell.swift */; };
+		1ED370F6206A521000C400D0 /* PrisePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED370F5206A521000C400D0 /* PrisePresenter.swift */; };
+		1ED370F8206A72F500C400D0 /* AccueilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED370F7206A72F500C400D0 /* AccueilViewController.swift */; };
+		1ED370FA206A73E100C400D0 /* PriseNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED370F9206A73E100C400D0 /* PriseNotificationCenter.swift */; };
+		1ED370FC206A98BB00C400D0 /* ActivityNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED370FB206A98BB00C400D0 /* ActivityNotificationCenter.swift */; };
+		1ED370FE206AB03E00C400D0 /* RdvNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED370FD206AB03E00C400D0 /* RdvNotificationCenter.swift */; };
 		6FA0397C2056D664001353BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA0397B2056D664001353BF /* AppDelegate.swift */; };
 		6FA0397E2056D664001353BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA0397D2056D664001353BF /* ViewController.swift */; };
 		6FA039812056D664001353BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA0397F2056D664001353BF /* Main.storyboard */; };
@@ -15,6 +33,30 @@
 		6FA039892056D664001353BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA039872056D664001353BF /* LaunchScreen.storyboard */; };
 		6FA039942056D664001353BF /* MyPekaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA039932056D664001353BF /* MyPekaTests.swift */; };
 		6FA0399F2056D664001353BF /* MyPekaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA0399E2056D664001353BF /* MyPekaUITests.swift */; };
+		6FA039AD2056D88C001353BF /* ActiviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA039AC2056D88C001353BF /* ActiviteTableViewCell.swift */; };
+		6FB5E9AA2069014400FA6CD0 /* RdvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB5E9A92069014400FA6CD0 /* RdvViewController.swift */; };
+		6FB5E9AC2069023B00FA6CD0 /* RdvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB5E9AB2069023B00FA6CD0 /* RdvTableViewCell.swift */; };
+		6FB5E9AE2069039800FA6CD0 /* RendezVousModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB5E9AD2069039800FA6CD0 /* RendezVousModel.swift */; };
+		6FB5E9B0206903FE00FA6CD0 /* RendezVousExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB5E9AF206903FE00FA6CD0 /* RendezVousExt.swift */; };
+		6FB5E9B22069059F00FA6CD0 /* AddRdvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB5E9B12069059F00FA6CD0 /* AddRdvViewController.swift */; };
+		6FB5E9B420690EC800FA6CD0 /* RdvPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB5E9B320690EC800FA6CD0 /* RdvPresenter.swift */; };
+		6FC8A08F2059785C00F2DD00 /* ActivitePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8A08E2059785C00F2DD00 /* ActivitePresenter.swift */; };
+		6FC8A09320597B2000F2DD00 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8A09220597B2000F2DD00 /* DateFormat.swift */; };
+		6FC8A095205982DD00F2DD00 /* PrescriptionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8A094205982DD00F2DD00 /* PrescriptionExt.swift */; };
+		6FC8A0972059884C00F2DD00 /* OrdonnanceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8A0962059884C00F2DD00 /* OrdonnanceExt.swift */; };
+		6FC8A09920598C4D00F2DD00 /* PersonneExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8A09820598C4D00F2DD00 /* PersonneExt.swift */; };
+		6FC8A09C2059907F00F2DD00 /* OrdonnanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8A09B2059907F00F2DD00 /* OrdonnanceTableViewCell.swift */; };
+		6FC8A0A2205992C700F2DD00 /* OrdonnanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC8A0A1205992C700F2DD00 /* OrdonnanceViewController.swift */; };
+		8C1A0D4E20616AAB0059D560 /* ShowOrdonnanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A0D4D20616AAB0059D560 /* ShowOrdonnanceViewController.swift */; };
+		8C1A0D5020616D580059D560 /* PrescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A0D4F20616D580059D560 /* PrescriptionTableViewCell.swift */; };
+		8C383C64206954D1005FF90B /* ShowRdvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C383C63206954D1005FF90B /* ShowRdvViewController.swift */; };
+		8C383C6620695B39005FF90B /* PriseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C383C6520695B39005FF90B /* PriseModel.swift */; };
+		8C383C6820695BA3005FF90B /* PriseExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C383C6720695BA3005FF90B /* PriseExt.swift */; };
+		8C383C6A20695F47005FF90B /* AddPriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C383C6920695F47005FF90B /* AddPriseViewController.swift */; };
+		8CDE3357206242A5008BB30F /* AddPrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE3356206242A5008BB30F /* AddPrescriptionViewController.swift */; };
+		8CDE335920624622008BB30F /* PrescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE335820624622008BB30F /* PrescriptionPresenter.swift */; };
+		8CDE335D20624B71008BB30F /* ShowPrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE335C20624B71008BB30F /* ShowPrescriptionViewController.swift */; };
+		8CDE335F206259BF008BB30F /* AddPersonneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE335E206259BF008BB30F /* AddPersonneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +77,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2C1ABF205FD59F00CAF176 /* OrdonnancePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdonnancePresenter.swift; sourceTree = "<group>"; };
+		1E2C1AC1205FDC7300CAF176 /* AddOrdonnanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddOrdonnanceViewController.swift; path = Controller/AddOrdonnanceViewController.swift; sourceTree = "<group>"; };
+		1ECD571C2058207D00A78FE8 /* ShowActiviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActiviteViewController.swift; sourceTree = "<group>"; };
+		1ECD571F20582EA700A78FE8 /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddActivityViewController.swift; path = Controller/AddActivityViewController.swift; sourceTree = "<group>"; };
+		1ECD572220582FEE00A78FE8 /* ActiviteSportiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteSportiveModel.swift; sourceTree = "<group>"; };
+		1ECD5725205832E600A78FE8 /* ActiviteSportiveExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiviteSportiveExt.swift; path = CoreData/ActiviteSportiveExt.swift; sourceTree = "<group>"; };
+		1ECD5727205840D600A78FE8 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1ECD57292058422E00A78FE8 /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
+		1ECD572E2058536100A78FE8 /* OrdonnanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdonnanceModel.swift; sourceTree = "<group>"; };
+		1ECD572F2058536100A78FE8 /* PersonneModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonneModel.swift; sourceTree = "<group>"; };
+		1ECD57302058536100A78FE8 /* PrescriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionModel.swift; sourceTree = "<group>"; };
+		1ECD57322058536100A78FE8 /* Synthese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synthese.swift; sourceTree = "<group>"; };
+		1ED370F3206A468600C400D0 /* PriseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriseTableViewCell.swift; path = Controller/PriseTableViewCell.swift; sourceTree = "<group>"; };
+		1ED370F5206A521000C400D0 /* PrisePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrisePresenter.swift; sourceTree = "<group>"; };
+		1ED370F7206A72F500C400D0 /* AccueilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilViewController.swift; sourceTree = "<group>"; };
+		1ED370F9206A73E100C400D0 /* PriseNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriseNotificationCenter.swift; sourceTree = "<group>"; };
+		1ED370FB206A98BB00C400D0 /* ActivityNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityNotificationCenter.swift; sourceTree = "<group>"; };
+		1ED370FD206AB03E00C400D0 /* RdvNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvNotificationCenter.swift; sourceTree = "<group>"; };
 		6FA039782056D664001353BF /* MyPeka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPeka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA0397B2056D664001353BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA0397D2056D664001353BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +109,30 @@
 		6FA0399A2056D664001353BF /* MyPekaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPekaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA0399E2056D664001353BF /* MyPekaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPekaUITests.swift; sourceTree = "<group>"; };
 		6FA039A02056D664001353BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA039AC2056D88C001353BF /* ActiviteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteTableViewCell.swift; sourceTree = "<group>"; };
+		6FB5E9A92069014400FA6CD0 /* RdvViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RdvViewController.swift; path = Controller/RdvViewController.swift; sourceTree = "<group>"; };
+		6FB5E9AB2069023B00FA6CD0 /* RdvTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RdvTableViewCell.swift; path = Controller/RdvTableViewCell.swift; sourceTree = "<group>"; };
+		6FB5E9AD2069039800FA6CD0 /* RendezVousModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousModel.swift; sourceTree = "<group>"; };
+		6FB5E9AF206903FE00FA6CD0 /* RendezVousExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousExt.swift; sourceTree = "<group>"; };
+		6FB5E9B12069059F00FA6CD0 /* AddRdvViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddRdvViewController.swift; path = Controller/AddRdvViewController.swift; sourceTree = "<group>"; };
+		6FB5E9B320690EC800FA6CD0 /* RdvPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RdvPresenter.swift; sourceTree = "<group>"; };
+		6FC8A08E2059785C00F2DD00 /* ActivitePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePresenter.swift; sourceTree = "<group>"; };
+		6FC8A09220597B2000F2DD00 /* DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		6FC8A094205982DD00F2DD00 /* PrescriptionExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrescriptionExt.swift; path = CoreData/PrescriptionExt.swift; sourceTree = "<group>"; };
+		6FC8A0962059884C00F2DD00 /* OrdonnanceExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrdonnanceExt.swift; path = CoreData/OrdonnanceExt.swift; sourceTree = "<group>"; };
+		6FC8A09820598C4D00F2DD00 /* PersonneExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonneExt.swift; path = CoreData/PersonneExt.swift; sourceTree = "<group>"; };
+		6FC8A09B2059907F00F2DD00 /* OrdonnanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrdonnanceTableViewCell.swift; path = Controller/OrdonnanceTableViewCell.swift; sourceTree = "<group>"; };
+		6FC8A0A1205992C700F2DD00 /* OrdonnanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrdonnanceViewController.swift; path = Controller/OrdonnanceViewController.swift; sourceTree = "<group>"; };
+		8C1A0D4D20616AAB0059D560 /* ShowOrdonnanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowOrdonnanceViewController.swift; path = Controller/ShowOrdonnanceViewController.swift; sourceTree = "<group>"; };
+		8C1A0D4F20616D580059D560 /* PrescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrescriptionTableViewCell.swift; path = Controller/PrescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		8C383C63206954D1005FF90B /* ShowRdvViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRdvViewController.swift; sourceTree = "<group>"; };
+		8C383C6520695B39005FF90B /* PriseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriseModel.swift; sourceTree = "<group>"; };
+		8C383C6720695BA3005FF90B /* PriseExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriseExt.swift; sourceTree = "<group>"; };
+		8C383C6920695F47005FF90B /* AddPriseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "\bAddPriseViewController.swift"; path = "Controller/\bAddPriseViewController.swift"; sourceTree = "<group>"; };
+		8CDE3356206242A5008BB30F /* AddPrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPrescriptionViewController.swift; path = Controller/AddPrescriptionViewController.swift; sourceTree = "<group>"; };
+		8CDE335820624622008BB30F /* PrescriptionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionPresenter.swift; sourceTree = "<group>"; };
+		8CDE335C20624B71008BB30F /* ShowPrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowPrescriptionViewController.swift; path = Controller/ShowPrescriptionViewController.swift; sourceTree = "<group>"; };
+		8CDE335E206259BF008BB30F /* AddPersonneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPersonneViewController.swift; path = Controller/AddPersonneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +160,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ECD571E20582E8E00A78FE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FA0397D2056D664001353BF /* ViewController.swift */,
+				6FB5E9A92069014400FA6CD0 /* RdvViewController.swift */,
+				1ED370F7206A72F500C400D0 /* AccueilViewController.swift */,
+				6FC8A0A1205992C700F2DD00 /* OrdonnanceViewController.swift */,
+				6FE7D2532062A7F200B7DD0E /* CellController */,
+				6FE7D2522062A7D800B7DD0E /* ShowController */,
+				6FE7D2512062A7A300B7DD0E /* AddController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1ECD572120582FD400A78FE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1ECD572E2058536100A78FE8 /* OrdonnanceModel.swift */,
+				1ECD572F2058536100A78FE8 /* PersonneModel.swift */,
+				1ECD57302058536100A78FE8 /* PrescriptionModel.swift */,
+				1ECD57322058536100A78FE8 /* Synthese.swift */,
+				1ECD572220582FEE00A78FE8 /* ActiviteSportiveModel.swift */,
+				6FB5E9AD2069039800FA6CD0 /* RendezVousModel.swift */,
+				8C383C6520695B39005FF90B /* PriseModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1ECD57242058318B00A78FE8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1ECD5725205832E600A78FE8 /* ActiviteSportiveExt.swift */,
+				6FC8A094205982DD00F2DD00 /* PrescriptionExt.swift */,
+				6FC8A0962059884C00F2DD00 /* OrdonnanceExt.swift */,
+				6FC8A09820598C4D00F2DD00 /* PersonneExt.swift */,
+				6FB5E9AF206903FE00FA6CD0 /* RendezVousExt.swift */,
+				8C383C6720695BA3005FF90B /* PriseExt.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		1ECD572B205842AD00A78FE8 /* Class Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1ECD57292058422E00A78FE8 /* DialogBoxHelper.swift */,
+				1ECD5727205840D600A78FE8 /* CoreDataManager.swift */,
+				6FC8A09220597B2000F2DD00 /* DateFormat.swift */,
+				1ED370F9206A73E100C400D0 /* PriseNotificationCenter.swift */,
+				1ED370FB206A98BB00C400D0 /* ActivityNotificationCenter.swift */,
+				1ED370FD206AB03E00C400D0 /* RdvNotificationCenter.swift */,
+			);
+			name = "Class Helpers";
+			sourceTree = "<group>";
+		};
 		6FA0396F2056D664001353BF = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +237,12 @@
 		6FA0397A2056D664001353BF /* MyPeka */ = {
 			isa = PBXGroup;
 			children = (
+				6FC8A09A2059905400F2DD00 /* Presenter */,
+				1ECD57242058318B00A78FE8 /* CoreData */,
+				1ECD572120582FD400A78FE8 /* Model */,
+				1ECD571E20582E8E00A78FE8 /* Controller */,
+				1ECD572B205842AD00A78FE8 /* Class Helpers */,
 				6FA0397B2056D664001353BF /* AppDelegate.swift */,
-				6FA0397D2056D664001353BF /* ViewController.swift */,
 				6FA0397F2056D664001353BF /* Main.storyboard */,
 				6FA039852056D664001353BF /* Assets.xcassets */,
 				6FA039872056D664001353BF /* LaunchScreen.storyboard */,
@@ -126,6 +268,54 @@
 				6FA039A02056D664001353BF /* Info.plist */,
 			);
 			path = MyPekaUITests;
+			sourceTree = "<group>";
+		};
+		6FC8A09A2059905400F2DD00 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6FC8A08E2059785C00F2DD00 /* ActivitePresenter.swift */,
+				1E2C1ABF205FD59F00CAF176 /* OrdonnancePresenter.swift */,
+				8CDE335820624622008BB30F /* PrescriptionPresenter.swift */,
+				6FB5E9B320690EC800FA6CD0 /* RdvPresenter.swift */,
+				1ED370F5206A521000C400D0 /* PrisePresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		6FE7D2512062A7A300B7DD0E /* AddController */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C1AC1205FDC7300CAF176 /* AddOrdonnanceViewController.swift */,
+				1ECD571F20582EA700A78FE8 /* AddActivityViewController.swift */,
+				8CDE3356206242A5008BB30F /* AddPrescriptionViewController.swift */,
+				8CDE335E206259BF008BB30F /* AddPersonneViewController.swift */,
+				6FB5E9B12069059F00FA6CD0 /* AddRdvViewController.swift */,
+				8C383C6920695F47005FF90B /* AddPriseViewController.swift */,
+			);
+			name = AddController;
+			sourceTree = "<group>";
+		};
+		6FE7D2522062A7D800B7DD0E /* ShowController */ = {
+			isa = PBXGroup;
+			children = (
+				1ECD571C2058207D00A78FE8 /* ShowActiviteViewController.swift */,
+				8C1A0D4D20616AAB0059D560 /* ShowOrdonnanceViewController.swift */,
+				8CDE335C20624B71008BB30F /* ShowPrescriptionViewController.swift */,
+				8C383C63206954D1005FF90B /* ShowRdvViewController.swift */,
+			);
+			name = ShowController;
+			sourceTree = "<group>";
+		};
+		6FE7D2532062A7F200B7DD0E /* CellController */ = {
+			isa = PBXGroup;
+			children = (
+				6FA039AC2056D88C001353BF /* ActiviteTableViewCell.swift */,
+				6FC8A09B2059907F00F2DD00 /* OrdonnanceTableViewCell.swift */,
+				8C1A0D4F20616D580059D560 /* PrescriptionTableViewCell.swift */,
+				6FB5E9AB2069023B00FA6CD0 /* RdvTableViewCell.swift */,
+				1ED370F3206A468600C400D0 /* PriseTableViewCell.swift */,
+			);
+			name = CellController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +452,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECD57392058536100A78FE8 /* Synthese.swift in Sources */,
+				1ECD57372058536100A78FE8 /* PrescriptionModel.swift in Sources */,
+				1E2C1AC0205FD59F00CAF176 /* OrdonnancePresenter.swift in Sources */,
+				6FC8A0A2205992C700F2DD00 /* OrdonnanceViewController.swift in Sources */,
+				6FC8A095205982DD00F2DD00 /* PrescriptionExt.swift in Sources */,
+				6FC8A09320597B2000F2DD00 /* DateFormat.swift in Sources */,
 				6FA0397E2056D664001353BF /* ViewController.swift in Sources */,
+				8CDE3357206242A5008BB30F /* AddPrescriptionViewController.swift in Sources */,
+				1ECD572A2058422E00A78FE8 /* DialogBoxHelper.swift in Sources */,
+				1ED370F4206A468600C400D0 /* PriseTableViewCell.swift in Sources */,
+				1ECD571D2058207D00A78FE8 /* ShowActiviteViewController.swift in Sources */,
+				1ECD5726205832E600A78FE8 /* ActiviteSportiveExt.swift in Sources */,
+				8C383C6820695BA3005FF90B /* PriseExt.swift in Sources */,
+				1ECD57362058536100A78FE8 /* PersonneModel.swift in Sources */,
+				1ED370F6206A521000C400D0 /* PrisePresenter.swift in Sources */,
+				6FC8A09C2059907F00F2DD00 /* OrdonnanceTableViewCell.swift in Sources */,
+				8C383C6620695B39005FF90B /* PriseModel.swift in Sources */,
+				6FB5E9B420690EC800FA6CD0 /* RdvPresenter.swift in Sources */,
+				1E2C1AC2205FDC7300CAF176 /* AddOrdonnanceViewController.swift in Sources */,
+				8CDE335D20624B71008BB30F /* ShowPrescriptionViewController.swift in Sources */,
 				6FA0397C2056D664001353BF /* AppDelegate.swift in Sources */,
+				1ECD572320582FEE00A78FE8 /* ActiviteSportiveModel.swift in Sources */,
+				1ECD57352058536100A78FE8 /* OrdonnanceModel.swift in Sources */,
+				1ED370FC206A98BB00C400D0 /* ActivityNotificationCenter.swift in Sources */,
+				6FC8A0972059884C00F2DD00 /* OrdonnanceExt.swift in Sources */,
+				1ECD572020582EA700A78FE8 /* AddActivityViewController.swift in Sources */,
+				6FB5E9AE2069039800FA6CD0 /* RendezVousModel.swift in Sources */,
+				6FB5E9AC2069023B00FA6CD0 /* RdvTableViewCell.swift in Sources */,
+				1ECD5728205840D600A78FE8 /* CoreDataManager.swift in Sources */,
+				8C383C6A20695F47005FF90B /* AddPriseViewController.swift in Sources */,
+				1ED370F8206A72F500C400D0 /* AccueilViewController.swift in Sources */,
+				6FC8A08F2059785C00F2DD00 /* ActivitePresenter.swift in Sources */,
+				8CDE335920624622008BB30F /* PrescriptionPresenter.swift in Sources */,
+				1ED370FE206AB03E00C400D0 /* RdvNotificationCenter.swift in Sources */,
+				8CDE335F206259BF008BB30F /* AddPersonneViewController.swift in Sources */,
+				8C1A0D5020616D580059D560 /* PrescriptionTableViewCell.swift in Sources */,
+				1ED370FA206A73E100C400D0 /* PriseNotificationCenter.swift in Sources */,
+				6FB5E9B0206903FE00FA6CD0 /* RendezVousExt.swift in Sources */,
+				8C383C64206954D1005FF90B /* ShowRdvViewController.swift in Sources */,
+				8C1A0D4E20616AAB0059D560 /* ShowOrdonnanceViewController.swift in Sources */,
+				6FA039AD2056D88C001353BF /* ActiviteTableViewCell.swift in Sources */,
+				6FB5E9AA2069014400FA6CD0 /* RdvViewController.swift in Sources */,
 				6FA039842056D664001353BF /* MyPeka.xcdatamodeld in Sources */,
+				6FC8A09920598C4D00F2DD00 /* PersonneExt.swift in Sources */,
+				6FB5E9B22069059F00FA6CD0 /* AddRdvViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +741,7 @@
 				6FA039A52056D664001353BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FA039A62056D664001353BF /* Build configuration list for PBXNativeTarget "MyPekaTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +750,7 @@
 				6FA039A82056D664001353BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FA039A92056D664001353BF /* Build configuration list for PBXNativeTarget "MyPekaUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +759,7 @@
 				6FA039AB2056D664001353BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,26 +1,25 @@
 //
-//  ViewController.swift
+//  RdvViewController.swift
 //  MyPeka
 //
-//  Created by Polytech on 12/03/2018.
+//  Created by Polytech on 26/03/2018.
 //  Copyright © 2018 Polytech. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, NSFetchedResultsControllerDelegate {
+class RdvViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, NSFetchedResultsControllerDelegate {
+
+    /// TableView controlée par "self" qui affiche la collection de "Rendez-vous"
+    @IBOutlet weak var rdvTable: UITableView!
     
-    @IBOutlet var activitePresenter: ActivitePresenter!
+    @IBOutlet var rdvPresenter: RdvPresenter!
     
-    /// TableView controlée par "self" qui affiche la collection d'"ActiviteSportive"
-    @IBOutlet weak var activiteTable: UITableView!
-    
-    /// On utilise NSFetchedResultsController pour connecter le Core Data aux vues (storyboards)
-    fileprivate lazy var activitesFetched : NSFetchedResultsController<ActiviteSportive> = {
+    fileprivate lazy var rdvFetched : NSFetchedResultsController<RendezVous> = {
         // prepare une requête
-        let request : NSFetchRequest<ActiviteSportive> = ActiviteSportive.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(ActiviteSportive.date), ascending: true)]
+        let request : NSFetchRequest<RendezVous> = RendezVous.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(RendezVous.date), ascending: true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchResultController.delegate = self
         return fetchResultController
@@ -29,30 +28,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
-           try self.activitesFetched.performFetch()
+            try self.rdvFetched.performFetch()
         }
         catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - ActiviteSportive data management
+    
+    // MARK: - Rendez-vous data management
     
     
-    /// Supprime l'activité dont l'index est passé en paramètre
+    /// Supprime le rendez vous dont l'index est passé en paramètre
     /// Precondition: Index must be in bound of collection
-    /// - Parameter activiteWithIndex: Index de l'activité à supprimer
-    /// - Returns: True si l'activité a été supprimée
-    func delete(activiteWithIndex index: IndexPath) -> Bool {
+    /// - Parameter  rendezVousWithIndex: Index du rendez vous à supprimer
+    /// - Returns: True si le rendez vous a été supprimé
+    func delete(rdvWithIndex index: IndexPath) -> Bool {
         let context = CoreDataManager.context
-        let activite = self.activitesFetched.object(at: index)
-        context.delete(activite)
+        let rdv = self.rdvFetched.object(at: index)
+        context.delete(rdv)
         do{
             try context.save()
             return true
@@ -62,21 +60,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate,
             return false
         }
     }
-    
-    func save() {
-        if let error = CoreDataManager.save(){
-            DialogBoxHelper.alert(view: self, error: error)
-        }
-    }
+
     
     // MARK: - NSFetchResultController delegate protocol
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        self.activiteTable.beginUpdates()
+        self.rdvTable.beginUpdates()
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        self.activiteTable.endUpdates()
+        self.rdvTable.endUpdates()
         CoreDataManager.save()
     }
     
@@ -84,32 +77,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate,
         switch type {
         case .delete:
             if let indexPath = indexPath{
-                self.activiteTable.deleteRows(at: [indexPath], with: .automatic)
+                self.rdvTable.deleteRows(at: [indexPath], with: .automatic)
             }
         case .insert:
             if let newIndexPath = newIndexPath{
-                self.activiteTable.insertRows(at: [newIndexPath], with: .fade)
+                self.rdvTable.insertRows(at: [newIndexPath], with: .fade)
             }
             
         default:
             break
         }
     }
-
+    
+    func save() {
+        if let error = CoreDataManager.save(){
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+    }
+    
+    
     // MARK: - TableView data source protocole
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.activiteTable.dequeueReusableCell(withIdentifier: "activiteCell", for: indexPath) as! ActiviteTableViewCell
-        let activite = self.activitesFetched.object(at: indexPath)
-        self.activitePresenter.configure(theCell: cell, forActivite: activite)
-
+        let cell = self.rdvTable.dequeueReusableCell(withIdentifier: "rdvCell", for: indexPath) as! RdvTableViewCell
+        let rdv = self.rdvFetched.object(at: indexPath)
+        self.rdvPresenter.configure(theCell: cell, forRdv: rdv)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        //return self.activites.count
-        guard let section = self.activitesFetched.sections?[section] else {
+        guard let section = self.rdvFetched.sections?[section] else {
             fatalError("unexpected section number")
         }
         return section.numberOfObjects
@@ -118,23 +116,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate,
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         //Pour gérer la suppression
         if (editingStyle==UITableViewCellEditingStyle.delete){
-            self.activiteTable.beginUpdates()
-            if self.delete(activiteWithIndex: indexPath){
-                self.activiteTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            self.rdvTable.beginUpdates()
+            if self.delete(rdvWithIndex: indexPath){
+                self.rdvTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             }
-            self.activiteTable.endUpdates()
+            self.rdvTable.endUpdates()
         }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+
     
-    
-    
+
     // MARK: - Navigation
     
-    let segueShowActiviteId = "showActiviteSegue"
+    let segueShowRdvId = "showRdvSegue"
     
     /// Dans une application story-board-based, on voudra souvent préparer une petite navigation
     /// Ici on prépare la navigation vers la vue show activité
@@ -143,11 +141,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate,
     ///   - segue: Provoque la transition
     ///   - sender: Vue qui envoie cette transition
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == self.segueShowActiviteId {
-            if let indexPath = self.activiteTable.indexPathForSelectedRow {
-                let showActiviteViewController = segue.destination as! ShowActiviteViewController
-                showActiviteViewController.activite = self.activitesFetched.object(at: indexPath)
-                self.activiteTable.deselectRow(at: indexPath, animated: true)
+        if segue.identifier == self.segueShowRdvId {
+            if let indexPath = self.rdvTable.indexPathForSelectedRow {
+                let showRdvViewController = segue.destination as! ShowRdvViewController
+                showRdvViewController.rdv = self.rdvFetched.object(at: indexPath)
+                self.rdvTable.deselectRow(at: indexPath, animated: true)
             }
         }
     }
@@ -156,23 +154,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate,
     /// - Parameters:
     ///   - sender : Le segue où on se trouvait
     @IBAction func unwindToViewController(sender: UIStoryboardSegue) {
-        if sender.identifier == "OkAddActivitySegue" {
-            if let controller = sender.source as? AddActivityViewController{
-                if let activite = controller.activite{
+        if sender.identifier == "OkAddRdvSegue" {
+            if let controller = sender.source as? AddRdvViewController{
+                if let rdv = controller.rdv{
                     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
                         return
                     }
                     appDelegate.saveContext()
-                    self.activiteTable.reloadData()
-                    ActivityNotificationCenter.programmedAllNotificationActivity(nameActivity: activite.nom, libelleActivity: activite.description!, forDate: activite.date as Date)
+                    self.rdvTable.reloadData()
+                     RdvNotificationCenter.programmedAllNotificationRdv(nameRdv: rdv.libelle, docteurRdv: (rdv.docteur?.nom)!, forDate: rdv.date as Date)
                 }
             }
         }
         print("I'm back")
     }
-    
-    
-    
+
     // MARK: - Helper methods
     
     
@@ -191,7 +187,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITabBarDelegate,
         }
         return appDelegate.persistentContainer.viewContext
     }
-    
-    
-}
 
+
+}
